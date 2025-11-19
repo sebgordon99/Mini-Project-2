@@ -7,8 +7,8 @@ foreground: "#37353E",
 background: "#D3DAD9"
 },
 dark: {
-foreground: "#37353E",
-background: "#D3DAD9"
+foreground: "#D3DAD9",
+background: "#37353E"
 }
 };
 // named export for this context (to be used via useContext elsewhere)
