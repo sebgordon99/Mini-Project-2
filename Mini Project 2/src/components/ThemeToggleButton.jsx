@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { MyThemeContext, themes } from "../context/MyThemeContext";
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from "@mui/icons-material/LightMode";
 
 export function ThemeToggleButton() {
   const { theme, setTheme, darkMode } = useContext(MyThemeContext);
@@ -10,7 +12,15 @@ export function ThemeToggleButton() {
 
   return (
     <button onClick={toggleTheme}>
-      {darkMode ? "Light Mode" : "Dark Mode"}
+      {darkMode ? (
+        <>
+        <LightModeIcon /> Light Mode
+        </>) : (
+          <>
+          <DarkModeIcon /> Dark Mode
+          </>)}
     </button>
   );
 }
+
+// need to fix the dark mode icon not displaying correctly
