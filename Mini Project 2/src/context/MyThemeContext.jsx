@@ -3,12 +3,12 @@ import { createContext, useState } from "react";
 // theme options with specific colour values
 export const themes = {
 light: {
-foreground: "#333333",
-background: "#BAE2FF"
+foreground: "#37353E",
+background: "#D3DAD9"
 },
 dark: {
-foreground: "#ffffff",
-background: "#222222"
+foreground: "#37353E",
+background: "#D3DAD9"
 }
 };
 // named export for this context (to be used via useContext elsewhere)

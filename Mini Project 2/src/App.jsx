@@ -15,9 +15,11 @@ function App() {
           <AppRoutes />
       <div>text</div>
       {/* <ApiTest /> */}
-      <p className="read-the-docs">
+      <footer className="read-the-docs">
+        <p>
         Created by Sebastian Gordon as his second Mini-Project in 2025
-      </p>
+        </p>
+      </footer>
       </MyThemeProvider>
       </UserProvider>
     </>
