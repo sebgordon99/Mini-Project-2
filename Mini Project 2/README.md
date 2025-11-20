@@ -4,6 +4,8 @@
 What was your requirements gathering and design process? 
 - Was it useful/successful?
 
+I wanted to create a web application that interacted with a full API, unlike my first mini project that only used a small API that I created. I looked into different fully fledged API's that I could interact with and decided upon a card game that had a massive database of card images and data.
+
 Give a high level overview of your application and its features
 
 Where does its data come from (external/internal APIs)?

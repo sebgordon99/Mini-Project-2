@@ -17,7 +17,7 @@ export function ApiTest() {
           <div key={card.id}>
             <div>{card.name}</div>
             <div>
-              <img src={card.image_uris.small} alt={card.name} />
+              <img src={card.image_uris.large} alt={card.name} />
             </div>
           </div>
         ))}

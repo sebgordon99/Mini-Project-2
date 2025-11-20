@@ -19,3 +19,6 @@ style={{backgroundColor: theme.background, color: theme.foreground}}>
 </nav>
 )
 }
+
+
+// give an outline or some way to break up the page
