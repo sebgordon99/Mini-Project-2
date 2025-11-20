@@ -33,6 +33,17 @@
   font-weight: bold;
 }
 
+button {
+  padding: 1em;
+  color: inherit;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: .5em;
+}
+
+/* did some research into why the button had a white outline, turns out i need to remove the 
+focus that most browsers automatically apply to buttons*/
 button:focus,
 button:active,
 button:focus-visible {
@@ -40,4 +51,8 @@ button:focus-visible {
   box-shadow: none !important;
 }
 
-/*testing why the button has an active outline
+/* the text in the button didnt look centered to me, so I slightly adjusted it */
+.toggletext {
+  position: relative;
+  top: -1px;
+}

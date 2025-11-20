@@ -27,10 +27,10 @@ export function ThemeToggleButton() {
     <button style={buttonStyle} className="togglebutton" onClick={toggleTheme}>
       {darkMode ? (
         <>
-        <LightModeIcon /> Light Mode
+        <LightModeIcon /> <span className="toggletext">Light Mode</span>
         </>) : (
           <>
-          <DarkModeIcon /> Dark Mode
+          <DarkModeIcon /> <span className="toggletext">Dark Mode</span>
           </>)}
     </button>
   );
