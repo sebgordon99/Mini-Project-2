@@ -1,3 +1,15 @@
+**Requirements:**
+The goal is to create an **interactive** page/s of their choice using React. Ideally the app will include interactive elements such as **forms, links and buttons**, along with **routes**, **data fetching** and various React **hooks** as needed, as well as **external libraries** such as bootstrap and MUI.
+
+**Checkbox:**
+- forms
+_links_ (the page headers are links that navigate between pages)
+_buttons_ (my darkmode toggle is implemented with a button)
+_routes_ (each page is loaded using routes and navlink to go between them)
+_data fetching_ (fetching data from the scryfall API)
+_hooks_ (useState, useEffect, useContext)
+_external libraries_ (mui navbar and icons)
+
 **Here are some questions for the students to cover during their presentations:**
 
 
