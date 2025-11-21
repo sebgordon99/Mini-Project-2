@@ -3,7 +3,7 @@ import PageNotFound from "../pages/PageNotFound";
 import { Route, Routes } from "react-router";
 import LoginPage from "../pages/LoginPage";
 import { ApiTest } from "../components/APItest";
-import { SearchPage } from "../pages/SearchPage";
+import SearchPage from "../pages/SearchPage";
 import { DeckPage } from "../pages/DeckPage";
 
 
