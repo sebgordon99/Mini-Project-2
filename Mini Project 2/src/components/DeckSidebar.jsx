@@ -9,7 +9,8 @@ export default function DeckSidebar({ deck, removeFromDeck }) {
   ).length;
 
   const spellCount = deck.filter(
-    (card) => !card.type_line.includes("Creature") && !card.type_line.includes("Land")
+    (card) =>
+      !card.type_line.includes("Creature") && !card.type_line.includes("Land")
   ).length;
 
   return (

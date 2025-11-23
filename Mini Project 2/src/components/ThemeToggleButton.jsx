@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { MyThemeContext, themes } from "../context/MyThemeContext";
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
 export function ThemeToggleButton() {
@@ -10,7 +10,7 @@ export function ThemeToggleButton() {
     setTheme(darkMode ? themes.light : themes.dark);
   };
 
- const buttonStyle = {
+  const buttonStyle = {
     backgroundColor: darkMode ? "#D3DAD9" : "#37353E",
     color: darkMode ? "#37353E" : "#D3DAD9",
     border: "none",
@@ -19,19 +19,20 @@ export function ThemeToggleButton() {
     cursor: "pointer",
     display: "flex",
     alignItems: "center",
-    gap: "6px"
+    gap: "6px",
   };
-
 
   return (
     <button style={buttonStyle} className="togglebutton" onClick={toggleTheme}>
       {darkMode ? (
         <>
-        <LightModeIcon /> <span className="toggletext">Light Mode</span>
-        </>) : (
-          <>
+          <LightModeIcon /> <span className="toggletext">Light Mode</span>
+        </>
+      ) : (
+        <>
           <DarkModeIcon /> <span className="toggletext">Dark Mode</span>
-          </>)}
+        </>
+      )}
     </button>
   );
 }
