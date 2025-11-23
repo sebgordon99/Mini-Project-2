@@ -6,10 +6,6 @@ import { NavBar } from "./components/NavBar";
 import AppRoutes from "./routes/AppRoutes";
 import { UserProvider } from "./context/usercontext";
 
-function removeFromDeck(id) {
-  setDeck((prev) => prev.filter((card) => card.id !== id));
-}
-
 function App() {
   const { theme } = useContext(MyThemeContext);
   useEffect(() => {
@@ -31,7 +27,6 @@ function App() {
     <>
       <UserProvider>
         <NavBar />
-        <body>
         <div className="content">
           <AppRoutes
             deck={deck}
@@ -39,7 +34,6 @@ function App() {
             removeFromDeck={removeFromDeck}
           />
         </div>
-        </body>
         <footer className="footer">
           <p>Created by Sebastian Gordon as his second Mini-Project in 2025</p>
         </footer>

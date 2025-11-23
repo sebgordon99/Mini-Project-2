@@ -7,6 +7,11 @@ export default function SearchPage({addToDeck}) {
     const [searchTerm, setSearchTerm] = useState("");
     const [results, setResults] = useState([]);
 
+    // needed to implement because of a freeze that occurred when typing
+    function handleInputChange(value) {
+  setSearchTerm(value);
+  setResults([]); // clear results while typing
+}
 //need to research the following further-------------------------------------
 async function handleSearch() {
     if (!searchTerm.trim()) return;
@@ -29,7 +34,7 @@ async function handleSearch() {
             {/* implement search UI here*/}
             <SearchBar
             searchTerm={searchTerm}
-            setSearchTerm={setSearchTerm}
+            setSearchTerm={handleInputChange}
             onSearch={handleSearch}
             />
             <SearchResults results={results} addToDeck={addToDeck} />
