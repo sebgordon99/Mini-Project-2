@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import { MyThemeContext, themes } from "../context/MyThemeContext";
+
 export default function SearchBar({searchTerm, setSearchTerm, onSearch}) {
+    const {theme} = useContext(MyThemeContext);
+    const {darkMode} = useContext(MyThemeContext);
+    const oppositeTheme = darkMode ? themes.light : themes.dark;
     function handleKeyPress(e) {
         if (e.key === "Enter") onSearch();
     }
@@ -18,7 +24,11 @@ export default function SearchBar({searchTerm, setSearchTerm, onSearch}) {
             }}
             />
 
-            <button onClick={onSearch} style={{padding: "8px 16px"}}>
+            <button onClick={onSearch} style={{
+                padding: "8px 16px",
+                backgroundColor: oppositeTheme.background,
+                color: oppositeTheme.foreground,
+            }}>
                 Search
             </button>
         </div>

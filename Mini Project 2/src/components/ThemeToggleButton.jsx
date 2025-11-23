@@ -39,4 +39,5 @@ export function ThemeToggleButton() {
 // need to fix the dark mode icon not displaying correctly - complete
 // center the text on light/dark mode button
 // disable white border on click
-// reverse colour palette of button depending on current theme
+// reverse colour palette of button depending on current theme - complete, needs to be applied
+//to other components
