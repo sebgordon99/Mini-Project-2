@@ -11,11 +11,14 @@ export default function SearchPage({ addToDeck }) {
     setSearchTerm(value);
     setResults([]); // clear results while typing
   }
-  //need to research the following further-------------------------------------
+
   async function handleSearch() {
+    // used to only return searches if they arent empty or just spaces
     if (!searchTerm.trim()) return;
 
     const res = await fetch(
+      //encodeURIComponent is something I needed to include as a simpler way of making dynamic requests
+      //i originally needed help with this section so will need to do more research
       `https://api.scryfall.com/cards/search?q=${encodeURIComponent(
         searchTerm
       )}`
@@ -28,7 +31,7 @@ export default function SearchPage({ addToDeck }) {
       setResults([]);
     }
   }
-  //need to research the above----------------------------------------------------
+
   return (
     <div style={{ padding: "20px" }}>
       <h1>Search Cards</h1>
