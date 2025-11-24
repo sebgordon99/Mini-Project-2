@@ -3,7 +3,7 @@ export default function SearchResults({ results, addToDeck }) {
     return <p>No results yet. Try searching!!!!</p>;
   }
 
-  return (
+ return (
     <div
       style={{
         display: "grid",
@@ -14,22 +14,31 @@ export default function SearchResults({ results, addToDeck }) {
       {results.map((card) => (
         <div
           key={card.id}
+          className="card-container"
           style={{
             padding: "10px",
-            paddingRight: "5px",
             border: "1px solid #D3DAD9",
             borderRadius: "8px",
             textAlign: "center",
+            position: "relative", // important for hover image
           }}
         >
           <h4>{card.name}</h4>
 
           {card.image_uris?.normal ? (
-            <img
-              src={card.image_uris.normal}
-              alt={card.name}
-              style={{ width: "175px", borderRadius: "6px" }}
-            />
+            <div className="image-wrapper">
+              <img
+                src={card.image_uris.normal}
+                alt={card.name}
+                className="card-image"
+                style={{ width: "175px", borderRadius: "6px" }}
+              />
+              <img
+                src={card.image_uris.normal}
+                alt={card.name}
+                className="card-image-hover"
+              />
+            </div>
           ) : (
             <p>No Image</p>
           )}
