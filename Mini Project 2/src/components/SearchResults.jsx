@@ -49,7 +49,7 @@ export default function SearchResults({ results, addToDeck }) {
               marginTop: "10px",
               padding: "6px 12px",
               background: "#715b5b",
-              color: "white",
+              color: "D3DAD9",
               border: "none",
               borderRadius: "4px",
               cursor: "pointer",

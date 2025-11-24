@@ -18,37 +18,51 @@ export default function DeckSidebar({ deck, removeFromDeck }) {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))",
-          gap: "15px",
+          gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+          gap: "20px",
         }}
       >
         {deck.map((card) => (
           <div
             key={card.id}
+            className="card-container"
             style={{
-              border: "1px solid #ddd",
               padding: "10px",
-              borderRadius: "6px",
+              border: "1px solid #D3DAD9",
+              borderRadius: "8px",
               textAlign: "center",
+              position: "relative",
             }}
           >
-            <h5>{card.name}</h5>
-            {card.image_uris?.small ? (
-              <img
-                src={card.image_uris.small}
-                alt={card.name}
-                style={{ width: "100px", borderRadius: "4px" }}
-              />
+            <h4>{card.name}</h4>
+
+            {card.image_uris?.normal ? (
+              <div
+                className="image-wrapper"
+
+              >
+                <img
+                  src={card.image_uris.normal}
+                  alt={card.name}
+                  className="card-image"
+                  style={{ width: "175px", borderRadius: "6px" }}
+                />
+                <img
+                  src={card.image_uris.normal}
+                  alt={card.name}
+                  className="card-image-hover"
+                />
+              </div>
             ) : (
               <p>No Image</p>
             )}
+            <div>
             <button
               onClick={() => removeFromDeck(card.id)}
               style={{
-                marginTop: "8px",
-                padding: "5px 10px",
-                background: "#f44336",
-                color: "white",
+                padding: "6px 12px",
+                background: "#715b5b",
+                color: "D3DAD9",
                 border: "none",
                 borderRadius: "4px",
                 cursor: "pointer",
@@ -56,6 +70,7 @@ export default function DeckSidebar({ deck, removeFromDeck }) {
             >
               Remove
             </button>
+            </div>
           </div>
         ))}
       </div>

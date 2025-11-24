@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { MyThemeContext, themes } from "../context/MyThemeContext";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 export default function SearchBar({ searchTerm, setSearchTerm, onSearch }) {
   const { theme } = useContext(MyThemeContext);
@@ -14,7 +16,7 @@ export default function SearchBar({ searchTerm, setSearchTerm, onSearch }) {
       <input
         type="text"
         value={searchTerm}
-        placeholder="Search for a card (e.g. Ancestral Recall)"
+        placeholder="Search for a card (e.g. Dragon)"
         onChange={(e) => setSearchTerm(e.target.value)}
         onKeyDown={handleKeyPress}
         style={{
@@ -34,6 +36,16 @@ export default function SearchBar({ searchTerm, setSearchTerm, onSearch }) {
       >
         Search
       </button>
+      {/* <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '25ch' } }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <TextField id="filled-basic" label="Filled" variant="filled" />
+      <TextField id="standard-basic" label="Standard" variant="standard" />
+    </Box> */}
     </div>
   );
 }

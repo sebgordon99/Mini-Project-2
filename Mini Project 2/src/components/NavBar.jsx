@@ -14,18 +14,18 @@ export function NavBar() {
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to="/login">Login</NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to="/search">Search</NavLink>
         </li>
         <li>
           <NavLink to="/deck">Deck</NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to="/apitest">API Test</NavLink>
-        </li>
+        </li> */}
         <li>
           <ThemeToggleButton />
         </li>
